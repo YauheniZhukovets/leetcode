@@ -11,6 +11,7 @@
 nums = [9,6,4,2,3,5,7,0,1]
 
 let missingNumber = function(nums) {
+    //////////1
 /*    let sum = 0
     let total = 0
     for(let i = 0; i < nums.length; i++) {
@@ -19,10 +20,22 @@ let missingNumber = function(nums) {
     }
     return total - sum*/
 
+/////////2
     let len = nums.length;//length of array.
     let sum = (len*(len+1))/2; // sum of all nos from 0 to n by series formula(сумма ряда)
     let sum2 = nums.reduce((a,c)=> a+c,0); //sum of array elements.
     return sum-sum2; //difference is the answer
+
+//////////3
+    /*let num
+
+    for (let i = 0; i <= nums.length; i++) {
+        if (!nums.includes(i)) {
+            num = i
+        }
+    }
+
+    return num*/
 
 };
 
