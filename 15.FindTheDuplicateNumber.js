@@ -14,7 +14,17 @@
 let nums = [3, 1, 3, 4, 2]
 
 let findDuplicate = function (nums) {
-    let SortedArr = nums.sort((a, b) => a - b)
+    let brr = []
+    for (let num of nums) {
+        if (brr[num] === true) {
+            return num
+        } else {
+            brr[num] = true
+        }
+    }
+
+
+    /*let SortedArr = nums.sort((a, b) => a - b)
     let current = NaN
     for (let num of SortedArr) {
         if (current === num) {
@@ -22,7 +32,7 @@ let findDuplicate = function (nums) {
         } else {
             current = num
         }
-    }
+    }*/
 };
 
 console.log(findDuplicate(nums))
